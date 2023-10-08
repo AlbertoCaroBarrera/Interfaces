@@ -1,0 +1,75 @@
+/*body*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background:#DCEDC8;
+    color:#212121;
+}
+
+
+/*navegacion*/
+
+header{
+	width: 100%;
+}
+
+.navegacion{
+    text-align: center;
+	width: 100%;
+	background: #8BC34A;
+}
+
+
+
+.navegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: #212121;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu > li> .titulo{
+    color: #DCEDC8;
+}
+
+.menu li a:hover{
+	color: white;
+	transition: all .3s;
+}
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+	background: #689F38;
+	width: 120%;
+	visibility: hidden;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: #212121;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+}
+
