@@ -1,0 +1,127 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    
+}
+
+body{
+    background-color: grey;
+}
+
+.imag{
+    
+    position: relative;
+    background-image: url(descarga.jfif);
+    background-repeat: no-repeat;
+	background-size:cover;
+    height: 60vh;
+}
+.imag2{
+    position: relative;
+    background-image: url(play.jfif);
+    background-repeat: no-repeat;
+	background-size:cover;
+    height: 60vh;
+}
+.imag3{
+    position: relative;
+    background-image: url(reloj.jpg);
+    background-repeat: no-repeat;
+	background-size:cover;
+    height: 60vh;
+}
+
+.precio{
+    border-radius: 10px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #000;
+    color: white;
+    width: 50px;
+
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.perifericos {
+    margin: 25px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    width: 30%;
+    
+    border-radius: 10%;
+}
+
+img{
+    width:100px;
+    height:100px;
+}
+
+.container2{
+    border: 1px solid white;
+    border-radius: 10%;
+}
+.container3{
+    display:block;
+    
+}
+
+.izquierda{
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    width: 45%;
+    border-right:  rgb(0, 158, 211) 1px solid;
+    
+}
+
+.derecha{
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    width: 45%;
+}
+h4{
+    color: rgb(0, 158, 211);
+}
+p{
+    padding: 5px;
+}
+
+
+
+button{
+    background-color: rgb(0, 158, 211);
+    color: white;
+    border: 1 px white solid;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+
+i{
+    padding: 10px 2px;
+}
+
+i:hover {
+    color: orange;
+}
+
+@media only screen and (max-width: 1500px) {
+    .perifericos {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+}
