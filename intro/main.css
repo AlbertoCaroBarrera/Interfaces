@@ -1,0 +1,55 @@
+
+body{
+    background-color: aqua;
+    margin: auto;
+    width: 90%;
+}
+
+header,nav,article,footer,aside{
+
+    border: 1px solid red;
+}
+
+article{
+    display: inline-block;
+    width: 65%;
+}
+aside{
+    display: inline-block;
+    width: 33%;
+}
+.logo{
+    display: inline-block;
+    border: 1px solid red;
+    width: 15%;
+    margin:auto;
+}
+h1{
+    border: 1px solid red;
+    display: inline-block;
+    width: 80%;
+    font-size: medium;
+    text-align: center;
+
+}
+ul{
+    text-align: center;
+}
+img{
+    display: block;
+}
+li{
+    display: inline-block;
+    margin: auto;
+    padding: 0 15px;
+}
+div{
+    display: inline-block;
+    text-align: center;
+}
+.logo1{
+    display: inline-block;
+    border: 1px solid red;
+    width: 3%;
+    margin:auto;
+}
