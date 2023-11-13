@@ -1,0 +1,187 @@
+/*body*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background:white;
+}
+/*contacto*/
+
+.contacto {
+	background-color: #091e3e;
+	color:white;
+	font-family: 'Open sans';
+	border-radius: 12px 0px 0px 0px;
+	margin: 2px;
+}
+
+.direccion{
+	display: inline-block;
+	padding: 3px 20px;
+}
+
+/*navegacion*/
+
+header{
+	width: 100%;
+}
+
+.navegacion{
+
+	width: 100%;
+	background: white;
+}
+
+.menu-izq{
+	display: inline-block;
+	width: 20%;
+}
+
+.menu-der{
+	text-align: right;
+	display: inline-block;
+	width: 70%;
+}
+
+.navegacion ul{
+	list-style: none;
+}
+
+li{
+	position: relative;
+	display: inline-block;
+}
+
+
+li > a{
+	display: block;
+	padding: 15px 20px;
+	color: black;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+li> .titulo{
+    color: #06a3da;
+	font-size:xx-large ;
+	padding: 10px;
+}
+
+li a:hover{
+	color: #06a3da;
+	border-bottom: solid 1px #06a3da;
+}
+.fa-magnifying-glass{
+	color:#06a3da;
+}
+
+.pro {
+	padding:10px;
+	background-color: #06a3da;
+	color: white;
+	border: solid 1px white;
+}
+
+i{
+	padding: 0px 5px;
+}
+
+/* imagen */
+
+.imagen{
+	background-image: url(carousel.jpg);
+	background-position: center; 
+    background-size: cover;
+    width: 100%;
+    height: 35vh;
+	color:white;
+	text-align: center;
+	padding: 10%;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin: 5px;
+	padding: 5px;
+	font-family: 'Open sans';
+}
+
+button{
+	margin: 5px;
+	background-color: rgb(0,0,0,0);
+	padding: 7px 15px;
+	border: white 1px solid;
+	color: white;
+}
+
+.azul{
+	border:none;
+	background-color: #06a3da;
+
+}
+
+/* Centrado */
+.centrado{
+	width: 100%;
+	text-align: center;
+
+}
+
+h4{
+	color:#06a3da;
+	
+}
+
+/* tablero de divs*/
+
+.container{
+	text-align: center;
+}
+
+.contenedores{
+	text-align: left;
+	display: inline-block;
+	margin: 0px;
+	background-color: #eef9ff;
+}
+.contenedor-top{
+	border-bottom: rgb(128, 128, 128,0.5) solid 1px;
+}
+
+.contenedor-top, .contenedor-bot{
+	padding:25px 50px;
+}
+p{
+	color:grey;
+	font-size: small;
+}
+
+.fa-check{
+	color:#06a3da;
+}
+
+.fa-xmark{
+	color: red;
+}
+
+p > i{
+	text-align: right;
+}
+.medio{
+	text-align: left;
+	display: inline-block;
+	margin: 0px;
+	background-color: white;
+}
+/* mediasquerys*/
+
+@media only screen and (max-width: 1000px) {
+    .contenedores {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+}
