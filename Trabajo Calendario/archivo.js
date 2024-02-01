@@ -1,6 +1,19 @@
 window.addEventListener("load", function () {
     let calendar = null;
 
+    function getDateRange(startDate, endDate) {
+        let dates = [];
+        let currentDate = new Date(startDate);
+    
+        while (currentDate <= endDate) {
+            dates.push(new Date(currentDate));
+            currentDate.setDate(currentDate.getDate() + 1);
+        }
+    
+        return dates;
+    }
+    
+
     function editEvent(event) {
         $('#event-modal input[name="event-index"]').val(event ? event.id : '');
         $('#event-modal input[name="event-name"]').val(event ? event.name : '');
@@ -24,8 +37,14 @@ window.addEventListener("load", function () {
             startDate: $('#event-modal input[name="event-start-date"]').datepicker('getDate'),
             endDate: $('#event-modal input[name="event-end-date"]').datepicker('getDate')
         }
-
+    
         var dataSource = calendar.getDataSource();
+        var isDateAvailable = checkDateAvailability(dataSource, event);
+    
+        if (!isDateAvailable) {
+            alert('No puedes agregar eventos en días ocupados.');
+            return;
+        }
 
         if (event.id) {
             for (var i in dataSource) {
@@ -54,7 +73,25 @@ window.addEventListener("load", function () {
         calendar.setDataSource(dataSource);
         $('#event-modal').modal('hide');
     }
-
+    
+    function checkDateAvailability(dataSource, newEvent) {
+        for (var i = 0; i < dataSource.length; i++) {
+            var existingEvent = dataSource[i];
+    
+            if (newEvent.id !== existingEvent.id) {
+                var overlap = existingEvent.eventDates.some(date => {
+                    return date >= newEvent.startDate && date <= newEvent.endDate;
+                });
+    
+                if (overlap) {
+                    return false; // Hay superposición de fechas
+                }
+            }
+        }
+    
+        return true; // No hay superposición de fechas
+    }
+    
     $(function () {
         var currentYear = new Date().getFullYear();
 
@@ -110,7 +147,8 @@ window.addEventListener("load", function () {
                     name: 'Final de clases',
                     location: 'Ultimo mes de clases',
                     startDate: new Date(currentYear, 1, 1),
-                    endDate: new Date(currentYear, 1, 29)
+                    endDate: new Date(currentYear, 1, 29),
+                    eventDates: getDateRange(new Date(currentYear, 1, 1), new Date(currentYear, 1, 29))
                 }
             ]
         });
